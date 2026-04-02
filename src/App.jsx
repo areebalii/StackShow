@@ -1,11 +1,38 @@
+import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 function App() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <div className="bg-[#030712] selection:bg-blue-500/30 min-h-screen">
+    <div
+      className="relative min-h-screen bg-[#030712] text-white selection:bg-blue-500/30 overflow-x-hidden"
+      style={{
+        '--mouse-x': `${mousePos.x}px`,
+        '--mouse-y': `${mousePos.y}px`,
+      }}
+    >
+      {/* Global Spotlight Overlay */}
+      <div
+        className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(600px at var(--mouse-x) var(--mouse-y), rgba(29, 78, 216, 0.15), transparent 80%)`
+        }}
+      />
+
       <Navbar />
-      <Outlet />
+      <main className="pt-20">
+        <Outlet />
+      </main>
     </div>
   );
 }
