@@ -30,8 +30,8 @@ const getChatResponse = async (userInput) => {
     tags: ["React", "Firebase", "Redux"],
     description: "A modern shopping experience featuring seamless state management and repository automation.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    github: "https://github.com/yourusername/shop-ai",
-    demo: "#",
+    github: "https://github.com/areebalii/e-commerce-website-with-react-js",
+    demo: "https://e-commerce-website-with-react-js.vercel.app/",
     codeSnippet: `// OpenAI Chat History Implementation
 const getChatResponse = async (userInput) => {
   const response = await openai.chat.completions.create({
