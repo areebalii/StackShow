@@ -32,6 +32,7 @@ const ProjectCard = ({ project }) => {
              <Link to={`/project/${project.id}`} className="rounded-full bg-white/10 p-3 hover:bg-white/20"><FaExternalLinkAlt size={18}/></Link>
           </div>
         </div>
+        
 
         {/* Info Section */}
         <div className="mt-4">

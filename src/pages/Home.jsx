@@ -4,6 +4,7 @@ import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard';
 import SearchBar from '../components/SearchBar';
 import FilterBar from '../components/FilterBar';
+import GithubStats from '../components/GithubStats';
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -15,6 +16,7 @@ const Home = () => {
     const matchesCategory = activeCategory === 'All' || project.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
+  
 
   return (
     <div className="min-h-screen bg-[#030712] text-white selection:bg-blue-500/30">
@@ -44,6 +46,8 @@ const Home = () => {
             technical experiments built with the MERN stack and modern UI libraries.
           </motion.p>
         </section>
+
+        <GithubStats />
 
         {/* 3. Search & Filter Controls */}
         <section className="mb-12 flex flex-col items-center justify-between gap-6 md:flex-row">

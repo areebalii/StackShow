@@ -8,6 +8,20 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=800",
     github: "https://github.com/yourusername/wearwell",
     demo: "#",
+    codeSnippet: `// OpenAI Chat History Implementation
+const getChatResponse = async (userInput) => {
+  const response = await openai.chat.completions.create({
+    model: "gpt-4",
+    messages: [
+      { role: "system", content: "You are a fashion assistant." },
+      ...chatHistory,
+      { role: "user", content: userInput }
+    ],
+  });
+  return response.choices[0].message;
+};`,
+    challenges: "Managing state for real-time chat while maintaining a 60fps UI was the main hurdle.",
+    solution: "Used React's useOptimistic hook and a custom Firebase listener to sync messages instantly."
   },
   {
     id: 2,
@@ -18,6 +32,20 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
     github: "https://github.com/yourusername/shop-ai",
     demo: "#",
+    codeSnippet: `// OpenAI Chat History Implementation
+const getChatResponse = async (userInput) => {
+  const response = await openai.chat.completions.create({
+    model: "gpt-4",
+    messages: [
+      { role: "system", content: "You are a fashion assistant." },
+      ...chatHistory,
+      { role: "user", content: userInput }
+    ],
+  });
+  return response.choices[0].message;
+};`,
+    challenges: "Managing state for real-time chat while maintaining a 60fps UI was the main hurdle.",
+    solution: "Used React's useOptimistic hook and a custom Firebase listener to sync messages instantly."
   },
   {
     id: 3,
@@ -28,5 +56,19 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800",
     github: "#",
     demo: "#",
+    codeSnippet: `// OpenAI Chat History Implementation
+const getChatResponse = async (userInput) => {
+  const response = await openai.chat.completions.create({
+    model: "gpt-4",
+    messages: [
+      { role: "system", content: "You are a fashion assistant." },
+      ...chatHistory,
+      { role: "user", content: userInput }
+    ],
+  });
+  return response.choices[0].message;
+};`,
+    challenges: "Managing state for real-time chat while maintaining a 60fps UI was the main hurdle.",
+    solution: "Used React's useOptimistic hook and a custom Firebase listener to sync messages instantly."
   },
 ];

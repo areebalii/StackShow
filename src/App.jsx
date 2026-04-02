@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import NeuralBackground from './components/NeuralBackground';
 
 function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -28,7 +29,7 @@ function App() {
           background: `radial-gradient(600px at var(--mouse-x) var(--mouse-y), rgba(29, 78, 216, 0.15), transparent 80%)`
         }}
       />
-
+      <NeuralBackground />
       <Navbar />
       <main className="pt-20">
         <Outlet />
